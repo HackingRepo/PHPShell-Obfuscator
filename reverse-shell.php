@@ -1,6 +1,6 @@
 <?php
 
-// NOTE: Education purpose Only this tutorial only for education purpose only NOT For Illegal Activity Developper Not Responsable a issue without the code
+// NOTE: Education purpose Only this tutorial only for education purpose only NOT For Illegal Activity Developper Not Responsable a issue without the code please respect laws
 //-----------------------//
 // a Encrypted Host and PORT In base64 for etablish a reverse shell to a victim Target
 
