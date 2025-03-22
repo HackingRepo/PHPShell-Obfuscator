@@ -1,0 +1,65 @@
+<!--  a Helper Website for Encoded hostname and port -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 Encoder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e2e2e2;
+            border: 1px solid #ccc;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <h1>Base64 Encoder</h1>
+    <label for="inputText">Enter an IP or PORT to Encode:</label>
+    <input type="text" id="inputText" placeholder="Enter IP or PORT">
+    <button onclick="encodeBase64()">Encode</button>
+
+    <div class="output" id="outputDiv" style="display:none;">
+        <h3>Base64 Encoded Output:</h3>
+        <p id="encodedOutput"></p>
+    </div>
+
+    <script>
+        function encodeBase64() {
+            // Get input value
+            var inputText = document.getElementById("inputText").value;
+
+            // Encode input to Base64
+            var encoded = btoa(unescape(encodeURIComponent(inputText)));
+
+            // Display the encoded output
+            document.getElementById("encodedOutput").textContent = encoded;
+            document.getElementById("outputDiv").style.display = "block";
+        }
+    </script>
+</body>
+</html>
